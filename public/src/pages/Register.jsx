@@ -38,6 +38,7 @@ function Register() {
         if (handleValidation()) {
             const { username, email, password } = values;
             // Axios makes a post request to the URL defined in utils/APIRoutes.js and in the backend, the request is read and stuff happens
+            console.log(registerRoute, process.env.BASE_URI);
             const { data } = await axios.post(registerRoute, {
                 username,
                 email,
